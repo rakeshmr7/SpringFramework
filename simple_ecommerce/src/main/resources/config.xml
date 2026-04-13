@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id = "p1" class = "com.example.simple_ecommerce.Product">
+    <property name = "id" value = "1"/>
+        <property name = "name" value = "Laptop"/>
+        <property name = "price" value = "999.99"/>
+        <property name = "quantity" value = "10"/>
+    </bean>
+    <bean id = "c1" class = "com.example.simple_ecommerce.Cart">
+        <property name = "product" ref = "p1"/>
+    </bean>
+
+    <bean id = "p2" class = "com.example.simple_ecommerce.Product">
+        <property name = "id" value = "2"/>
+        <property name = "name" value = "Smartphone"/>
+        <property name = "price" value = "499.99"/>
+        <property name = "quantity" value = "10"/>
+    </bean>
+
+    <bean id = "c2" class = "com.example.simple_ecommerce.Cart">
+        <property name = "product" ref = "p2"/>
+    </bean>
+</beans>

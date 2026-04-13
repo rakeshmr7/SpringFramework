@@ -1,0 +1,50 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id = "emp1" class = "com.example.spring_core.Employee">
+        <property name = "id" value = "101"/>
+        <property  name="name" value="Ajay"/>
+        <property  name="sal" value="100000"/>
+       </bean>
+       <bean id = "emp2" class = "com.example.spring_core.Employee">
+        <property name = "id" value = "102"/>
+        <property  name="name" value="Arun"/>
+        <property  name="sal" value="200000"/>
+       </bean>
+
+       <bean id = "dept1" class = "com.example.spring_core.Department">
+        <property name = "deptId" value = "101"/>
+        <property  name="deptName" value="Sales"/>
+        <property name = "emp" ref = "emp1"/>
+       </bean>
+        <bean id = "dept2" class = "com.example.spring_core.Department">
+        <property name = "deptId" value = "102"/>
+        <property  name="deptName" value="IT"/>
+        <property name = "emp" ref = "emp2"/>
+       </bean>
+
+       <bean id = "bat1" class = "com.example.spring_core.Battery">
+        <property name = "id" value = "101"/>
+        <property  name="brand" value="Amaron"/>
+        </bean>
+       <bean id = "mob1" class = "com.example.spring_core.Mobile">
+        <property name = "id" value = "101"/>
+        <property  name="brand" value="Iphone"/>
+        <property  name="price" value="100000"/>
+        <property name = "battery" ref = "bat1"/>
+       </bean>
+
+       <bean id = "bat2" class = "com.example.spring_core.Battery">
+        <property name = "id" value = "102"/>
+        <property  name="brand" value="Samsung"/>
+        </bean>
+       <bean id = "mob2" class = "com.example.spring_core.Mobile">
+        <property name = "id" value = "102"/>
+        <property  name="brand" value="Samsung"/>
+        <property  name="price" value="30000"/>
+        <property name = "battery" ref = "bat2"/>
+       </bean>
+
+</beans>
